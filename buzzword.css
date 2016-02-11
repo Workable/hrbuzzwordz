@@ -1,0 +1,434 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.4em;
+  font-weight: 300;
+  margin: 0;
+  padding: 2em;
+}
+
+.quotes-holder {
+  /*font-size: 3vw;*/
+  display: inline-block;
+  font-size: 4.2em;
+  font-weight: 600;
+  height: 200px;
+  padding: 0 60px;
+  position: relative;
+}
+
+.quotes-holder:before {
+  color: #fff;
+	content: "\201C"; /*Unicode for Left Double Quote*/
+	font-family: Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  left: -6px;
+  line-height: 1.2em;
+  position: relative;
+  top: 0;
+}
+
+.quotes-holder:after {
+  color: #fff;
+  content: "\201D";
+  font-family: Georgia, serif;
+  /*font-size: 80px;*/
+  font-size: 1.2em;
+  font-weight: bold;
+  position: relative;
+  right: -6px;
+  top: 0;
+}
+
+blockquote {
+  display: inline-block;
+  position: relative;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+}
+
+blockquote::before {
+  content: "\201C"; /*Unicode for Left Double Quote*/
+	font-family: Georgia, serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1.2em;
+}
+
+blockquote::after {
+  content: "\201D";
+  font-family: Georgia, serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  right: 0px;
+  top: 0;
+}
+
+.blur-filter {
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.container {
+  padding: 0%;
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );*/ /* IE6-9 fallback on horizontal gradient */
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  position: relative;
+}
+
+.content { padding: 7% 20% 5%;}
+
+.popup {
+  display: none;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup-mobile {position: relative; top: 0; left: 0; margin: 30px 0 0; width: 100%;}
+
+.popup-btn-close {
+  background: url("images/overlay-cross.png") no-repeat;
+  background-image: linear-gradient(transparent, transparent),url("images/overlay-cross.svg");
+  position: absolute; top: 0px; right: 0px; color: #4EBD79; font-size: 14px; font-weight: bold; text-transform: uppercase;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.popup-content {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  color: #5f5f5f;
+  font-size: 19px;
+  line-height: 30px;
+  max-height:50%;
+  top:25%;
+  overflow: auto;
+  text-align: left;
+}
+
+.popup-content--left {
+  float: left;
+  background: #e2e2e2;
+  width: 30%;
+  height: 310px;
+  text-align: center;
+  display: table;
+  padding-top: 40px;
+}
+
+.popup-content--right {
+  float: left;
+  width: 70%;
+  padding: 30px 4%;
+}
+
+.popup-content h3 {
+  font-size: 1.4em;
+  padding: 0px 0 10px;
+  margin-top: 10px;
+
+}
+
+.popup-content p {
+  text-align: left;
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.buzzword-btn {
+  background: #fff;
+  box-shadow: 0 6px #b7b7b7;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+  padding: 15px 50px;
+  display: inline-block;
+  margin: 0px 30px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+}
+
+.buzzword-btn:hover {
+  box-shadow: 0 4px #aaaaaa;
+  top: 2px;
+}
+
+.buzzword-btn:active {
+  box-shadow: 0 0 #aaaaaa;
+  top: 6px;
+}
+
+.buzzword-footer {
+  position: relative;
+}
+
+.buzzword-footer p {
+  margin: 20px 0;
+}
+
+.tweet-post {
+  padding: 7px 15px 8px 10px;
+  border-radius: 2px;
+  border: 1px solid #fff;
+  display: inline-block;
+}
+
+.twitter-white {
+  display: inline-block;
+  background: url("images/twitter-icon-white.png") no-repeat;
+  background-image: linear-gradient(transparent, transparent),url("images/twitter-icon-white.svg");
+  background-size: 23px 19px;
+  width: 24px;
+  height: 19px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.tweet-post:hover, .share-btn:hover {
+  opacity: 0.8;
+}
+
+.share-btn {
+  padding: 8px 12px;
+  border-radius: 2px;
+  border: 1px solid #fff;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.share-white {
+  display: inline-block;
+  background: url("images/share-icon.png") no-repeat;
+  background-image: linear-gradient(transparent, transparent),url("images/share-icon.svg");
+  background-size: 18px 18px;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.buzzword-logo {
+  background: url("images/buzzword-logo.png") no-repeat;
+  background-image: linear-gradient(transparent, transparent),url("images/buzzword-logo.svg");
+  background-size: 183px 158px;
+  width: 183px;
+  height: 158px;
+  margin: 20px auto;
+}
+
+.black-bordered-btn {
+  padding: 4px 13px;
+  border-radius: 2px;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.black-bordered-btn:hover {
+	opacity: 0.8;
+}
+
+.popup .black-bordered-btn {
+  margin: 20px 15px 0 0;
+}
+
+.black-bg {
+  background-color: #333;
+  color: #fff
+}
+
+.green-bg {
+  background-color: #6fc5a2;
+  color: #fff
+}
+
+.orange-bg {
+  background-color: #f79754;
+  color: #fff;
+  border: 2px solid #f79754;
+}
+
+.orange-border {
+  border: 2px solid #f79754;
+  color: #f79754
+}
+
+.social-icons-holder-2 {
+  top: 0;
+  -webkit-transform: translate(-50%,-100%);
+  -ms-transform: translate(-50%,-100%);
+  transform: translate(-50%,-100%);
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  left: 50%;
+  background: rgba(256,256,256,0.6);
+  padding: 5px 7px 0px;
+  border-radius: 2px;
+}
+
+.social-icons-holder-2:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #fff;
+  border-width: 7px;
+  margin-left: -7px;
+  opacity: 0.6;
+}
+
+.social-icons-holder-2.active {
+  top: -0.7em;
+  transition: all .4s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.social-icons {
+  background: url("images/social-btns.png") no-repeat;
+  background-image: linear-gradient(transparent, transparent),url("images/social-btns.svg");
+  background-size: 80px 40px;
+  display: inline-block;
+  height: 40px;
+  margin: 5px 2px;
+  width: 40px;
+}
+
+.twitter-icon {
+  background-position: 0 0;
+}
+
+.fb-icon {
+  background-position: -40px 0;
+}
+.social-icons:hover {
+  opacity: 0.8;
+}
+
+.buzzword-logo-colored {
+  background: url("images/popup-logo.png") no-repeat;
+  background-image: linear-gradient(transparent, transparent),url("images/popup-logo.svg");
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  display: table-cell;
+}
+
+
+
+/* Media queries */
+@media (max-width: 1024px) {
+  .content { padding: 5% 2%; }
+  .quotes-holder {
+    font-size: 3.8em;
+    padding: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .popup-content {
+    min-height: 50%;
+    max-height: 100%;
+  }
+
+  .buzzword-logo {
+    width: 20%;
+    height: 120px;
+    background-size: 100%;
+  }
+  .content { padding: 2% 2% 7em; }
+
+  .quotes-holder {
+    padding: 0;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .buzzword-btn { padding: 15px 40px; }
+
+  .popup-content--left {display: none;}
+  .popup-content--right { width: 100%; }
+}
+
+@media (max-width: 400px) {
+  .quotes-holder {
+    font-size: 2em;
+    min-height: 100px;
+  }
+  .buzzword-logo { width: 30%; }
+
+  .popup-content { top: 5%;}
+
+}
+
+

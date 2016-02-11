@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Play buzzword bingo with HRbuzzwordz!</title>
+	<meta name="description" content="Are you an HR thought leader? Test yourself on the first ever HR buzzword generator. Coin your own #HRbuzzword now!">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="buzzword.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="http://carrot.github.io/share-button/dist/share-button.min.css">
+	<meta content='http://hrbuzzwordz.com/images/buzzword-thumb.png' property='og:image'>
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Workable">
+	<meta name="twitter:creator" content="@Workable">
+	<meta name="twitter:title" content="HR Buzzwordz">
+	<meta name="twitter:description" content="HR Buzzwordz on Twitter">
+	<meta name="twitter:image" content="http://workable.staging.wpengine.com/buzzword/images/buzzword-thumb.png">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<div class="container">
+		<div class="buzzword-logo"></div>
+		<div class="content">
+			<div id="quotes" class="quotes-holder"></div>
+		</div>
+		<div class="buzzword-footer">
+			<div class="social-icons-holder-2">
+			  <a id="tweet-this-post" class="social-icons twitter"></a>
+			  <a class="btnShare social-icons fb-icon" href="https://www.facebook.com/sharer/sharer.php?u=http://hrbuzzwordz.com/" onclick="openSocialWindow(this); return false;" target="blank"></a>
+			</div>
+			<a class="share-btn" id="share-btn"><span class="share-white"></span>share</a>
+			<p>to hype your own trend, or...</p>
+			<div id="btn" class="buzzword-btn">Buzz me again!</div>
+		</div>
+	</div>
+
+	<div class="popup first">
+		<div class="popup-content">
+			<div class="popup-content--left">
+				<div class="buzzword-logo-colored"></div>
+			</div>
+			<div class="popup-content--right">
+				<h3>Tired of meaningless buzzwords?</h3>
+				<p>Take a break with the plain-spoken HR Glossary.</p>
+				<p>A <i>mercifully short </i>list of industry terms worth understanding.</p>
+				<a class="black-bordered-btn orange-bg" href="https://blog.workable.com/hr-terms-the-plain-spoken-glossary/" target="_blank">learn more</a>
+				<a class="black-bordered-btn orange-border pop-up-close">No, I'm buzzing</a>
+			 </div>
+
+		  <span class="popup-btn-close pop-up-close"></span>
+		</div>
+	</div>
+
+	<div class="popup second">
+		<div class="popup-content">
+			<div class="popup-content--left">
+				<div class="buzzword-logo-colored"></div>
+			</div>
+			<div class="popup-content--right">
+			  <h3>Not tired yet?</h3>
+			  <p>Hmm. You’re getting ideas for an HR strategy document, right?</p>
+			  <p>Try our shortlist of industry terms instead.</p>
+			  <p>They’re much better. Honest.</p>
+			  <a class="black-bordered-btn orange-bg" href="https://blog.workable.com/hr-terms-the-plain-spoken-glossary/" target="_blank">show me</a>
+			  <a class="black-bordered-btn orange-border pop-up-close">No, more buzz</a>
+			  <span class="popup-btn-close pop-up-close"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup third">
+		<div class="popup-content">
+			<div class="popup-content--left">
+				<div class="buzzword-logo-colored"></div>
+			</div>
+			<div class="popup-content--right">
+		  	<h3>Seriously. This is bad for you.</h3>
+		  	<p>But we love your persistence. Got a buzzword of your own to add to the list? Tweet on #HRbuzz</p>
+		  	<a class="black-bordered-btn orange-border pop-up-close">Buzz me again</a>
+		  </div>
+		  <span class="popup-btn-close pop-up-close"></span>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="buzzword.js"></script>
+
+</body>
+</html>
