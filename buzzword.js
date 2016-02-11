@@ -291,7 +291,6 @@ $('#tweet-this-post').click(function() {
 
 //twitter
 function createTweet() {
-  //var getPostTitle = document.getElementById( "quotes" ).innerHTML;
   linkElement = document.getElementById( "tweet-this-post" );
   getPostLink = window.location.href;
   linkElement.setAttribute( "href", getPostLink );
