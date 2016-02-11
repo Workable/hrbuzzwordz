@@ -34,7 +34,6 @@ h1 {
 }
 
 .quotes-holder {
-  /*font-size: 3vw;*/
   display: inline-block;
   font-size: 4.2em;
   font-weight: 600;
@@ -59,7 +58,6 @@ h1 {
   color: #fff;
   content: "\201D";
   font-family: Georgia, serif;
-  /*font-size: 80px;*/
   font-size: 1.2em;
   font-weight: bold;
   position: relative;
@@ -120,7 +118,7 @@ blockquote::after {
   position: relative;
 }
 
-.content { padding: 7% 20% 5%;}
+.content { padding: 5% 20% 5%;}
 
 .popup {
   display: none;

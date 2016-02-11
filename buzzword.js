@@ -291,18 +291,17 @@ $('#tweet-this-post').click(function() {
 
 //twitter
 function createTweet() {
-  var getPostTitle = document.getElementById( "quotes" ).innerHTML;
+  //var getPostTitle = document.getElementById( "quotes" ).innerHTML;
   linkElement = document.getElementById( "tweet-this-post" );
   getPostLink = window.location.href;
-
   linkElement.setAttribute( "href", getPostLink );
   $( linkElement ).on( "click", function( event ){
   var getPostTitle = document.getElementById( "quotes" ).innerHTML;
-      event.preventDefault();
-      var tweetedLink = this.getAttribute( "href" );
-      var x = $(window).width()/2 - 600/2;
-    var y = $(window).height()/2 - 600/2;
-    window.open( 'http://twitter.com/intent/tweet?url=' + tweetedLink + '&text="' + getPostTitle + '" will rock your workplace! %23HRbuzz %23triumphofjargon http://bit.ly/20NQPVm', 'twitterwindow', 'height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0, left='+x+',top='+y );
+  event.preventDefault();
+  var tweetedLink = this.getAttribute( "href" );
+  var x = $(window).width()/2 - 600/2;
+  var y = $(window).height()/2 - 600/2;
+  window.open( 'http://twitter.com/intent/tweet?url=' + tweetedLink + '&text="' + getPostTitle + '" will rock your workplace! %23HRbuzzword %23triumphofjargon', 'twitterwindow', 'height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0, left='+x+',top='+y );
   });
 }
 
