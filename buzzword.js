@@ -208,10 +208,7 @@ function hrBuzzwordGame() {
   //quotes
   var q_1 = quotes_1[ (makeUniqueRandom(quotes_1.length)) ];
   var q_2 = quotes_2[ (makeUniqueRandom(quotes_2.length)) ];
-  // var q_1 = quotes_1[ Math.floor( Math.random() * quotes_1.length ) ];
-  // var q_2 = quotes_2[ Math.floor( Math.random() * quotes_2.length ) ];
   if(q_1 == undefined){
-    //repeat
     var q_1 = quotes_1[ Math.floor( Math.random() * quotes_1.length ) - 1];
   }
   document.getElementById("quotes").innerHTML = q_1 + q_2;
